@@ -1,6 +1,5 @@
-import firebase from '../config/firebase.js';
+import {storage} from '../config/firebase.js';
 
-const { storage } = firebase;
 
 // Function to read data from Firebase Storage
 async function readDataFromFile(filePath) {
