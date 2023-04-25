@@ -1,11 +1,12 @@
 {
   "name": "melodyze_v0",
+  "type": "module",
   "version": "0.1.0",
   "description": "Python to nodeJS transition - Melodyze backend",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/routes/index.js"
+    "start": "node src/app.js"
   },
   "author": "",
   "license": "ISC",

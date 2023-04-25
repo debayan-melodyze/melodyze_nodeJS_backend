@@ -1,4 +1,4 @@
-const firebase = require('../config/firebase').default;
+import firebase from '../config/firebase.js';
 
 const writeFile = async (filePath, buffer) => {
   try {
@@ -9,4 +9,4 @@ const writeFile = async (filePath, buffer) => {
   }
 };
 
-module.exports = { writeFile };
+export { writeFile };

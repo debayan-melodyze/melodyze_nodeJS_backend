@@ -1,14 +1,12 @@
-// writeController.js
-
-const { writeDataToFile } = require('../models/writeFile');
-const { writeDataToDb } = require('../db/writeDb');
+import { writeFile } from '../models/writeFile.js';
+import { writeDataToDb } from '../db/writeDb.js';
 
 // Function to write data to Firebase Storage and Firebase Realtime Database
 async function writeData(req, res) {
   try {
     const fileData = req.body.fileData;
     const dbData = req.body.dbData;
-    await writeDataToFile('path/to/file', fileData);
+    await writeFile('path/to/file', fileData);
     await writeDataToDb('path/to/database', dbData);
     res.status(200).send('Data written successfully');
   } catch (error) {
@@ -16,6 +14,5 @@ async function writeData(req, res) {
   }
 }
 
-module.exports = {
-  writeData
-};
+export { writeData };
+

@@ -1,4 +1,6 @@
-const { storage } = require('../config/firebase').default;
+import firebase from '../config/firebase.js';
+
+const { storage } = firebase;
 
 // Function to read data from Firebase Storage
 async function readDataFromFile(filePath) {
@@ -13,6 +15,4 @@ async function readDataFromFile(filePath) {
   }
 }
 
-module.exports = {
-  readDataFromFile
-};
+export { readDataFromFile };

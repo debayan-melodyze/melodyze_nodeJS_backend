@@ -1,12 +1,6 @@
-// firebase.js
-
-import firebase from 'firebase/app';
-import 'firebase/storage';
-import 'firebase/database';
-
-// const firebase = require('firebase/app');
-// require('firebase/storage');
-// require('firebase/database');
+import { initializeApp } from 'firebase/app';
+import { getDatabase } from "firebase/database";
+import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyDZNEuHznNzJTobl4xzeGUibuUcVFpZUjg',
@@ -16,12 +10,11 @@ const firebaseConfig = {
   storageBucket: 'melodyze-test.appspot.com'
 };
 
-firebase.initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+const storage = getStorage(app);
+const database = getDatabase(app);
 
-const storage = firebase.storage().ref();
-const database = firebase.database().ref();
-
-module.exports = {
+export default {
   storage,
   database
 };

@@ -1,6 +1,4 @@
-// writeDb.js
-
-const admin = require('firebase-admin');
+import admin from 'firebase-admin';
 
 // Function to write data to Firebase Realtime Database
 async function writeDataToDb(path, data) {
@@ -9,6 +7,4 @@ async function writeDataToDb(path, data) {
   await ref.set(data);
 }
 
-module.exports = {
-  writeDataToDb
-};
+export { writeDataToDb };

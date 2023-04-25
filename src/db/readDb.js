@@ -1,6 +1,4 @@
-// readDb.js
-
-const admin = require('firebase-admin');
+import admin from 'firebase-admin';
 
 // Function to read data from Firebase Realtime Database
 async function readDataFromDb(path) {
@@ -10,6 +8,5 @@ async function readDataFromDb(path) {
   return snapshot.val();
 }
 
-module.exports = {
-  readDataFromDb
-};
+export { readDataFromDb };
+

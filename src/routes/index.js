@@ -1,10 +1,11 @@
-const express = require('express');
+import express from 'express';
+
 const router = express.Router();
 
-const { readFile } = require('../controllers/readController');
-const { writeFile } = require('../controllers/writeController');
+import { readData } from '../controllers/readController.js';
+import { writeData } from '../controllers/writeController.js';
 
-router.get('/read/:filePath', readFile);
-router.post('/write/:filePath', writeFile);
+router.get('/read/:filePath', readData);
+router.post('/write/:filePath', writeData);
 
-module.exports = router;
+export default router;
