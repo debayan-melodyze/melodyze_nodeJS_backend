@@ -1,4 +1,4 @@
-import { downloadDataFromStorage } from '../models/downloadFile.js';
+import { downloadDataFromStorage } from '../storage/downloadFile.js';
 import { readDataFromDb } from '../db/readDb.js';
 
 // Function to read data from Firebase Storage and Firebase Realtime Database

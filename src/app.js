@@ -1,5 +1,5 @@
 import express from 'express';
-import router from './routes/index.js'
+import router from './routes/index_api.js'
 
 const app = express();
 // const routes = require('./routes');

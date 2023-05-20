@@ -1,4 +1,4 @@
-import { uploadDataToStorage } from '../models/uploadFile.js';
+import { uploadDataToStorage } from '../storage/uploadFile.js';
 import { writeDataToDb } from '../db/writeDb.js';
 
 // Function to write data to Firebase Storage and Firebase Realtime Database

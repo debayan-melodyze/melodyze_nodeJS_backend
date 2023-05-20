@@ -5,7 +5,7 @@ import { ref, set, child } from 'firebase/database';
 async function writeDataToDb(path, data) {
   const dbRef = ref(db);
   await set(child(dbRef, path), data);
-  console.log('Data successfully written to Firebase Realtime Database');
+  console.log('Data successfully written to Firebase Realtime Database:'+path);
 }
 
 export { writeDataToDb };
